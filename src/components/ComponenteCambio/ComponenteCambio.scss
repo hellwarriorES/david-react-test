@@ -1,0 +1,33 @@
+// Definimos una variable para el color principal
+.encendido{
+    background-color:green;
+  }
+  .apagado{
+    background-color:red;
+  }
+  $color-principal: #ff0000;
+$color-apagado: red;
+$color-encendido: green;
+// Definimos un mixin para estilos de botones
+@mixin estilos-boton {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: $color-principal;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+}
+
+// Definimos una clase para botones grandes
+.boton-grande {
+  @include estilos-boton;
+  font-size: 20px;
+}
+
+// Definimos una clase para botones pequeños
+.boton-pequeno {
+  @include estilos-boton;
+  font-size: 14px;
+}
